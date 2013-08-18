@@ -1,0 +1,17 @@
+$white: #FBFAF8;
+$black: #242423;
+$blue: #3696CA;
+
+$inconsolata: 'inconsolata', 'Monaco', monospace;
+
+$font-size-base: 22px;
+$font-size-large: golden-ratio($font-size-base, 1);
+
+$base-spacer: $font-size-base;
+
+$base-transition-time: .1s;
+
+$background-color: $white;
+$font-family: $inconsolata;
+
+$footer-height: 30px;

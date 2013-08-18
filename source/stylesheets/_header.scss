@@ -1,0 +1,22 @@
+header {
+  background-color: $black;
+  color: $white;
+  margin-bottom: $base-spacer * 3;
+  padding: 1em 0;
+  text-align: center;
+
+  h1 {
+    font-size: $font-size-large;
+    margin-bottom: 1em;
+  }
+
+  a {
+    color: $white;
+    border-bottom: 2px dashed rgba($white, 0.2);
+    @include transition(border-color $base-transition-time ease-in-out);
+
+    &:hover {
+      border-bottom-color: $white;
+    }
+  }
+}
