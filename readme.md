@@ -1,1 +1,1 @@
-A [Middleman](http://middlemanapp.com) template. Good for a [single page](http://timbreapp.com) site. Also integrates [Bourbon](http://bourbon.io).
+A showcase of [sketches](https://github.com/edwardloveall/nature-of-code-skectches) from working through [The Nature of Code](http://natureofcode.com).
