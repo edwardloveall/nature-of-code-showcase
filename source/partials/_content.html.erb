@@ -1,0 +1,5 @@
+<%
+  Dir.chdir("source") if (Dir.pwd == "/Users/edwardloveall/Code/Processing/NatureOfCode/showcase")
+  Dir.glob("gifs/**").each do |sketch| %>
+  <img src="<%= sketch %>" />
+<% end %>
