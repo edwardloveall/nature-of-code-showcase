@@ -1,0 +1,7 @@
+<%
+  Dir.chdir("source") if (Dir.pwd == "/Users/edwardloveall/Projects/noc_showcase")
+  Dir.glob("gifs/**").each do |sketch| %>
+  <span class="image" data-img="<%= sketch %>"></span>
+<% end %>
+<a href="" class="prev">Previous</a>
+<a href="" class="next">Next</a>

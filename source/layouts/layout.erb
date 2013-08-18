@@ -13,6 +13,11 @@
   </head>
 
   <body class="<%= page_classes %>">
-    <%= yield %>
+    <div class="wrap">
+      <%= yield %>
+    </div>
+    <footer>
+      &copy; Edward Loveall <%= Date.today.year %>
+    </footer>
   </body>
 </html>
