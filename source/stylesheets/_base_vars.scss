@@ -14,4 +14,4 @@ $base-transition-time: .1s;
 $background-color: $white;
 $font-family: $inconsolata;
 
-$footer-height: 30px;
+$footer-height: 30px + $base-spacer * 2;
