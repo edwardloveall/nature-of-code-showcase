@@ -1,8 +1,10 @@
+<% Dir.chdir("source") if (Dir.pwd == "/Users/edwardloveall/Projects/noc_showcase") %>
+
 var current, images;
 
 $(document).ready(function() {
-  images = $('span.image');
-  current = images.first();
+  images = <%= Dir.glob("gifs/**") %>;
+  current = 0;
 
   set_image();
 
@@ -32,22 +34,22 @@ $(document).keydown(function(e){
 ---------------*/
 
 function set_image() {
-  $('img.display').attr('src', current.data('img'));
+  $('img.display').attr('src', images[current]);
 }
 
 function next_image() {
-  current = current.next('span.image');
-  if (current.length == 0) {
-    current = images.first();
+  current++;
+  if (current > images.length) {
+    current = 0;
   }
 
   set_image();
 }
 
 function prev_image() {
-  current = current.prev('span.image');
-  if (current.length == 0) {
-    current = images.last();
+  current--;
+  if (current < 0) {
+    current = images.length;
   }
 
   set_image();
