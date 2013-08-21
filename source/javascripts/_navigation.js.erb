@@ -6,6 +6,7 @@ $(document).ready(function() {
   images = <%= Dir.glob("gifs/**") %>;
   current = 0;
 
+  preload_images();
   set_image();
 
   $('a.next').click(function (e) {
@@ -39,18 +40,28 @@ function set_image() {
 
 function next_image() {
   current++;
-  if (current > images.length) {
-    current = 0;
-  }
+  current = mod(current, images.length);
 
   set_image();
 }
 
 function prev_image() {
   current--;
-  if (current < 0) {
-    current = images.length;
-  }
+  current = mod(current, images.length);
 
   set_image();
+}
+
+function preload_images() {
+  $.each(images, function(i, image) {
+    $.get(image);
+  })
+}
+
+function mod(n, wrap) {
+  var result = n % wrap;
+  if (result < 0) {
+    result += wrap;
+  }
+  return result;
 }
